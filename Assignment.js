@@ -32,12 +32,13 @@ function filterBook(bookarray){
         return filtered_book;
 
 }
-function mapBook(bookarray) {
-    let mappedBook = bookarray.map((book) => book.title);
-    let mappedBook2 = bookarray.map((name) => name.author);
+function mapBook(bookarray) { 
+    let mappedBook = bookarray.map((book) => book.title); 
+    let mappedBook2 = bookarray.map((book) => book.author); 
+    
+    return [mappedBook, mappedBook2]; 
+} 
 
-    return mappedBook, mappedBook2
-}
 book1.displayInfo();
 let bookarray = [];
 addBook(bookarray, book1)
@@ -52,13 +53,6 @@ console.log(search);
 
 let filter = filterBook(bookarray);
 console.log(filter);
-
-function mapBook(bookarray) { 
-    let mappedBook = bookarray.map((book) => book.title); 
-    let mappedBook2 = bookarray.map((book) => book.author); 
-    
-    return [mappedBook, mappedBook2]; 
-} 
 
 let [mappedNames, mappedAuthors] = mapBook(bookarray); 
 console.log(mappedNames); 
